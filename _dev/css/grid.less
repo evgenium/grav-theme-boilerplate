@@ -1,0 +1,76 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@offset: 30px;
+@cols: 12;
+
+body * {
+  box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, pre {
+  margin-top: calc(@offset / 2);
+  margin-bottom: calc(@offset / 2);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-left: calc(@offset / -2);
+  margin-right: calc(@offset / -2);
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 439px) {
+    width: calc(100% - @offset);
+  }
+  @media screen and (min-width: 440px) {
+    width: calc(100% - @offset);
+  }
+  @media screen and (min-width: 980px) {
+    width: calc(100% - @offset);
+  }
+  @media screen and (min-width: 1180px) {
+    width: 1150px;
+  }
+  @media screen and (min-width: 1380px) {
+    width: 1150px;
+  }
+}
+
+.col(@xs, @sm, @md, @lg, @xl) {
+  margin-left: calc(@offset / 2);
+  margin-right: calc(@offset / 2);
+
+  @media screen and (max-width: 439px) {
+    width: calc(100% / @cols * @xs - @offset);
+  }
+  @media screen and (min-width: 440px) {
+    width: calc(100% / @cols * @sm - @offset);
+  }
+  @media screen and (min-width: 980px) {
+    width: calc(100% / @cols * @md - @offset);
+  }
+  @media screen and (min-width: 1180px) {
+    width: calc(100% / @cols * @lg - @offset);
+  }
+  @media screen and (min-width: 1380px) {
+    width: calc(100% / @cols * @xl - @offset);
+  }
+}
+
+
