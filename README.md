@@ -9,6 +9,8 @@ A starter for GravCMS easy theme development evn setup: gulp + less
 ## Workflow
 All changes you make should take place at '\_dev' folder. 
 
+### Development
+
 While in dev use
 
     gulp watch
@@ -18,6 +20,8 @@ to start watcher, or
     gulp build --dev
     
 to buld theme files with non-minified CSS and with sourcemaps
+
+### Production
 
 For production with minified CSS & no comments, sourcemaps etc. use
 
